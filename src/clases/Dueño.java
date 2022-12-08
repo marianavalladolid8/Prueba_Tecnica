@@ -1,32 +1,27 @@
 package clases;
 
-public class Propietario {
+public class Dueño {
 	//1. Propiedades -Declarar atributos privados
 	
 	private String Nombre;
 	private String RFC;
 	private String CURP;
 	private int Nacimiento;
-	private String Calle;
-	private String Colonia;
-	private String Ciudad;
-	private int CP;
+	
 
 	// 2. Constructor - Encapsulamiento de los atributos
-	public Propietario(String nombre, String rFC, String cURP, int nacimiento, String calle, String colonia,
-			String ciudad, int cP) {
+	
+	public Dueño(String nombre, String rFC, String cURP, int nacimiento) {
 		super();
 		Nombre = nombre;
 		RFC = rFC;
 		CURP = cURP;
 		Nacimiento = nacimiento;
-		Calle = calle;
-		Colonia = colonia;
-		Ciudad = ciudad;
-		CP = cP;
 	}//constructor 1
 	
-	public Propietario(String nombre, String rFC, String cURP) {
+	
+
+	public Dueño(String nombre, String rFC, String cURP) {
 		super();
 		Nombre = nombre;
 		RFC = rFC;
@@ -60,12 +55,11 @@ public class Propietario {
 		CURP = cURP;
 	}//setCURP
 
-	
-	//toString
-	@Override
+
+
+	@Override //toString
 	public String toString() {
-		return "Propietario [Nombre=" + Nombre + ", RFC=" + RFC + ", CURP=" + CURP + ", Nacimiento=" + Nacimiento
-				+ ", Calle=" + Calle + ", Colonia=" + Colonia + ", Ciudad=" + Ciudad + ", CP=" + CP + "]";
+		return "Dueño [Nombre=" + Nombre + ", RFC=" + RFC + ", CURP=" + CURP + ", Nacimiento=" + Nacimiento + "]";
 	}//toString
 	
 	

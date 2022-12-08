@@ -17,7 +17,7 @@ public class TestAuto {
 		Vocho.CambiarMarcha(4);
 		//Vocho.CambiarMarcha(-1);
 		
-		Vocho.ReducirMarcha();
+		Vocho.ReducirMarcha(0);
 		
 		
 		

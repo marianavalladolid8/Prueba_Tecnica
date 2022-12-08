@@ -157,14 +157,24 @@ public void CambiarMarcha (int Marcha) {
 }//Cambiar Marchas
 
 //Método para reducir marchas
-public void ReducirMarcha () {
-	this.MarchaActual -= 1;
-	System.out.println("Se ha disminuido a la marcha: "+ this.MarchaActual);
-	if (Estado == true) {
-		System.out.println("Engranamos marcha atras");
-		Estado = true;
-	}else {
-		System.out.println("No es posible engranar marcha atras");
+//Se agrego condicion para NO engranar marcha atras, si la velocidad supera los 0 km/h
+public void ReducirMarcha (int Marcha) {
+	if (Marcha == -1 && this.VelocidadA == 0) {
+		this.MarchaActual = -1;
+		System.out.println("El carro esta en reversa. Valor de la marcha actual: " + this.MarchaActual);
+	} else {
+		if (Marcha != -1 && this.MarchaActual > Marcha) {
+			this.MarchaActual = Marcha;
+			System.out.println("Se hizo el cambio a la marcha " + this.MarchaActual);
+		} else {
+			if (Marcha == -1 && this.VelocidadA > 0) {
+				System.out.println("No se puede meter reversa, el automovil esta en movimiento.");
+				
+			}
+			if (Marcha != -1 && this.MarchaActual < Marcha) {
+				System.out.println("No puedes reducir una marcha mayor de la que ya tienes");
+			}
+		}
 	}
 }//Reducir Marcha
  
