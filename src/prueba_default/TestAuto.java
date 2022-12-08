@@ -11,6 +11,14 @@ public class TestAuto {
 		Vocho.Aceleracion();
 		Vocho.Aceleracion();
 		Vocho.Freno();
+		Vocho.CambiarMarcha(1);
+		Vocho.CambiarMarcha(2);
+		Vocho.CambiarMarcha(3);
+		Vocho.CambiarMarcha(4);
+		//Vocho.CambiarMarcha(-1);
+		
+		Vocho.ReducirMarcha();
+		
 		
 		
 	}	//class

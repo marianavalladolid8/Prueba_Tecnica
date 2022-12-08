@@ -16,6 +16,10 @@ public class Automovil {
 	private int NMarchas;
 	private boolean TransmisionA;
 	
+	private int MarchaActual;
+	boolean Estado = false;
+	
+	
 	//2.Constructor
 	public Automovil(String modelo, String color, int año, String marca, String chasis, String propietario, int velocidadM, int velocidadA, String npuertas, boolean techoS, int nMarchas, boolean transmisionA) {
 		super();
@@ -31,6 +35,7 @@ public class Automovil {
 		this.TechoS = techoS;
 		this.NMarchas = nMarchas;
 		this.TransmisionA = transmisionA;
+		this.MarchaActual = 0;
 	}// constructor
 
 	//3.Getters y Setters
@@ -143,6 +148,25 @@ public void Freno() {
 	this.VelocidadA = 0;
 	System.out.println("El Vocho ha frenado. Velocidad actual: " + this.VelocidadA);
 	}//freno
+
+//Implementar método que permita cambiar marchas
+public void CambiarMarcha (int Marcha) {
+	this.MarchaActual = Marcha;
+	System.out.println("Se engrano a la marcha: " + this.MarchaActual);
+	
+}//Cambiar Marchas
+
+//Método para reducir marchas
+public void ReducirMarcha () {
+	this.MarchaActual -= 1;
+	System.out.println("Se ha disminuido a la marcha: "+ this.MarchaActual);
+	if (Estado == true) {
+		System.out.println("Engranamos marcha atras");
+		Estado = true;
+	}else {
+		System.out.println("No es posible engranar marcha atras");
+	}
+}//Reducir Marcha
  
 
 	@Override
@@ -156,3 +180,4 @@ public void Freno() {
 
 	
 	}//Clase Automovil
+
