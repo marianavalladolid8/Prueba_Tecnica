@@ -3,14 +3,14 @@ package clases;
 public class Propietario {
 	//1. Propiedades -Declarar atributos
 	
-	public String Nombre;
-	public String RFC;
-	public String CURP;
-	public int Nacimiento;
-	public String Calle;
-	public String Colonia;
-	public String Ciudad;
-	public int CP;
+	private String Nombre;
+	private String RFC;
+	private String CURP;
+	private int Nacimiento;
+	private String Calle;
+	private String Colonia;
+	private String Ciudad;
+	private int CP;
 
 	// 2. Constructor - Encapsulamiento de los atributos
 	public Propietario(String nombre, String rFC, String cURP, int nacimiento, String calle, String colonia,
