@@ -1,7 +1,7 @@
 package clases;
 
 public class Propietario {
-	//1. Propiedades -Declarar atributos
+	//1. Propiedades -Declarar atributos privados
 	
 	private String Nombre;
 	private String RFC;
@@ -34,7 +34,7 @@ public class Propietario {
 	}// constructor2
 	
 	
-	// 3. Metodos 
+	// 3. Métodos 
 
 	public String getNombre() {
 		return Nombre;

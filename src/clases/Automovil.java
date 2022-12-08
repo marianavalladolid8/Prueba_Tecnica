@@ -1,7 +1,7 @@
 package clases;
 
 public class Automovil {
-	//1. Propiedades -Declarar atributos
+	//1. Propiedades -Declarar atributos privados
 	
 	private String Modelo;
 	private String Color;
@@ -128,10 +128,31 @@ public class Automovil {
 
 	public void setTransmisionA(boolean transmisionA) {
 		TransmisionA = transmisionA;
-	}
+	}// fin de getters y setters
+	
+			//Método para aceleración aumento de 1 en 1 km/h
+	public void Aceleracion() {
+		this.VelocidadA += 1;
+		System.out.println("El Vocho va a una velocidad de : "+ VelocidadA + " Km/h");
+		
+	}//aceleración
 	
 	
+			//Método para frenado del automaovil
+public void Freno() {
+	this.VelocidadA = 0;
+	System.out.println("El Vocho ha frenado. Velocidad actual: " + this.VelocidadA);
+	}//freno
+ 
+
+	@Override
+	public String toString() {
+		return "Automovil [Modelo=" + Modelo + ", Color=" + Color + ", Año=" + Año + ", Marca=" + Marca + ", Chasis="
+				+ Chasis + ", Propietario=" + Propietario + ", VelocidadM=" + VelocidadM + ", VelocidadA=" + VelocidadA
+				+ ", Npuertas=" + Npuertas + ", TechoS=" + TechoS + ", NMarchas=" + NMarchas + ", TransmisionA="
+				+ TransmisionA + "]";
 	
+}//toString
+
 	
-	
-}//Clase Automovil
+	}//Clase Automovil
