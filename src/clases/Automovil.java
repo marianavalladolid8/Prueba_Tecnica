@@ -1,6 +1,6 @@
 package clases;
 
-import java.util.Scanner;
+import java.util.Scanner;// importamos una libreria para usar scanner
 
 public class Automovil extends Propietario {
 	//1. Propiedades -Declarar atributos privados
@@ -28,7 +28,7 @@ public class Automovil extends Propietario {
 			String cURP, int nacimiento, String modelo, String color, int año, String marca, String chasis,
 			String propietario, int velocidadM, int velocidadA, String npuertas, boolean techoS, int nMarchas,
 			boolean transmisionA, int marchaActual, boolean estado) {
-		super(calle, colonia, ciudad, codigoPpostal, nombre, rFC, cURP, nacimiento);
+		super(calle, colonia, ciudad, codigoPpostal, nombre, rFC, cURP, nacimiento);// extiende de propietario
 		this.Modelo = modelo;
 		this.Color = color;
 		this.Año = año;
@@ -171,18 +171,17 @@ public void CambiarMarcha (int Marcha) {
 //Se agrego condicion para NO engranar marcha atras, si la velocidad supera los 0 km/h
 public void ReducirMarcha (int Marcha) {
 	if (Marcha == -1 && this.VelocidadA == 0) {
-		this.MarchaActual = -1;
+		this.MarchaActual = -1;// La reversa la representamos como -1
 		System.out.println("El carro esta en reversa. Valor de la marcha actual: " + this.MarchaActual);
 	} else {
-		if (Marcha != -1 && this.MarchaActual > Marcha) {
+		if (Marcha != -1 && this.MarchaActual > Marcha) { // Si la marcha es diferente de -1 y la marcha actual es mayor a la marcha 
 			this.MarchaActual = Marcha;
 			System.out.println("Se hizo el cambio a la marcha " + this.MarchaActual);
 		} else {
-			if (Marcha == -1 && this.VelocidadA > 0) {
+			if (Marcha == -1 && this.VelocidadA > 0) {//La marcha es igual a -1 y la velocidad actual es mayor a 0
 				System.out.println("No se puede meter reversa, el automovil esta en movimiento.");
-				
 			}
-			if (Marcha != -1 && this.MarchaActual < Marcha) {
+			if (Marcha != -1 && this.MarchaActual < Marcha) { //La marcha es diferente de -1 y la marcha actual es menor a la marcha
 				System.out.println("No puedes reducir una marcha mayor de la que ya tienes");
 			}
 		}
@@ -209,7 +208,7 @@ public void ReducirMarcha (int Marcha) {
 	 float volumen = gas/this.Tanque *100;
 	 System.out.println("El tanque de gasolina tiene " + volumen + " % de capacidad");
 	 
- }
+ }//void
 	 
  
  

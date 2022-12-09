@@ -18,7 +18,7 @@ public class Direccion {
 			CodigoPpostal = codigoPpostal;
 		}//constructor
 
-		//3. Metodos 
+		//3. Metodos Getters y Setters
 		
 		public String getCalle() {
 			return Calle;

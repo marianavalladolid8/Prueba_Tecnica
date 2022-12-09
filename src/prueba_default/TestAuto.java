@@ -18,11 +18,11 @@ public class TestAuto {
 		Vocho.CambiarMarcha(2);
 		Vocho.CambiarMarcha(3);
 		Vocho.CambiarMarcha(4);
-		//Vocho.CambiarMarcha(-1);
+		//Vocho.CambiarMarcha(-1); // Comentado para que no interfiera con reducir marcha
 		
 		Vocho.ReducirMarcha(0);
 		
-		//Vocho.Autonomia(2,3);
+		Vocho.Autonomia(2,3); 
 		
 		Vocho.Combustible(20);
 		

@@ -21,8 +21,8 @@ public class Propietario extends Direccion {
 	
 
 	public Propietario(String calle, String colonia, String ciudad, int codigoPpostal, String nombre, String rFC,
-			String cURP) {
-		super(calle, colonia, ciudad, codigoPpostal);
+			String cURP) {// atributos obligatorios
+		super(calle, colonia, ciudad, codigoPpostal);//extiende de direccion
 		Nombre = nombre;
 		RFC = rFC;
 		CURP = cURP;
@@ -30,9 +30,6 @@ public class Propietario extends Direccion {
 
 	
 	// 3. Métodos 
-
-	
-	
 
 	public String getNombre() {
 		return Nombre;
