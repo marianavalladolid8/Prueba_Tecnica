@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class TestAutoTest {
+	// Intento de pruebas 
 
 	@Test
 	void testMain() {
@@ -71,4 +72,4 @@ class TestAutoTest {
 		fail("Not yet implemented");
 	}
 
-}
+}//
