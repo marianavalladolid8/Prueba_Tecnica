@@ -1,6 +1,6 @@
 package clases;
 
-public class Dueño {
+public class Propietario extends Direccion {
 	//1. Propiedades -Declarar atributos privados
 	
 	private String Nombre;
@@ -10,26 +10,29 @@ public class Dueño {
 	
 
 	// 2. Constructor - Encapsulamiento de los atributos
-	
-	public Dueño(String nombre, String rFC, String cURP, int nacimiento) {
-		super();
+	public Propietario(String calle, String colonia, String ciudad, int codigoPpostal, String nombre, String rFC,
+			String cURP, int nacimiento) {
+		super(calle, colonia, ciudad, codigoPpostal);// extiende de direccion
 		Nombre = nombre;
 		RFC = rFC;
 		CURP = cURP;
 		Nacimiento = nacimiento;
-	}//constructor 1
-	
+	}
 	
 
-	public Dueño(String nombre, String rFC, String cURP) {
-		super();
+	public Propietario(String calle, String colonia, String ciudad, int codigoPpostal, String nombre, String rFC,
+			String cURP) {
+		super(calle, colonia, ciudad, codigoPpostal);
 		Nombre = nombre;
 		RFC = rFC;
 		CURP = cURP;
-	}// constructor2
-	
+	}
+
 	
 	// 3. Métodos 
+
+	
+	
 
 	public String getNombre() {
 		return Nombre;

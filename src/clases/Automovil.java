@@ -1,6 +1,8 @@
 package clases;
 
-public class Automovil {
+import java.util.Scanner;
+
+public class Automovil extends Propietario {
 	//1. Propiedades -Declarar atributos privados
 	
 	private String Modelo;
@@ -18,11 +20,15 @@ public class Automovil {
 	
 	private int MarchaActual;
 	boolean Estado = false;
+	private float Tanque;
 	
 	
-	//2.Constructor
-	public Automovil(String modelo, String color, int año, String marca, String chasis, String propietario, int velocidadM, int velocidadA, String npuertas, boolean techoS, int nMarchas, boolean transmisionA) {
-		super();
+	//2.Constructor	
+	public Automovil(String calle, String colonia, String ciudad, int codigoPpostal, String nombre, String rFC,
+			String cURP, int nacimiento, String modelo, String color, int año, String marca, String chasis,
+			String propietario, int velocidadM, int velocidadA, String npuertas, boolean techoS, int nMarchas,
+			boolean transmisionA, int marchaActual, boolean estado) {
+		super(calle, colonia, ciudad, codigoPpostal, nombre, rFC, cURP, nacimiento);
 		this.Modelo = modelo;
 		this.Color = color;
 		this.Año = año;
@@ -35,9 +41,14 @@ public class Automovil {
 		this.TechoS = techoS;
 		this.NMarchas = nMarchas;
 		this.TransmisionA = transmisionA;
+		this.MarchaActual = marchaActual;
+		this.Estado = estado;
 		this.MarchaActual = 0;
+		this.Tanque = 50;
+		
 	}// constructor
 
+	
 	//3.Getters y Setters
 	public String getModelo() {
 		return Modelo;
@@ -178,7 +189,30 @@ public void ReducirMarcha (int Marcha) {
 	}
 }//Reducir Marcha
  
-
+// Método que calcule la autonomia del viaje en automovil
+ public void Autonomia(int i, int j) {
+	 try (Scanner in = new Scanner(System.in)) {
+		double distancia, x1, x2;
+		    System.out.print("Capacidad de Batería en kWh: ");
+		    x1 = in.nextDouble();
+		    in.nextLine();
+		    System.out.print("Ingresa el consumo en kWh/100 km: ");
+		    x2 = in.nextDouble();
+		    in.nextLine();
+		    distancia=Math.sqrt((x1/x2)* 100);
+		    System.out.println("Valor de la autonimia del viaje: " + distancia);
+	}//void
+ }//Scanner
+ 
+ //Método para calcular el combustible
+ public void Combustible(int gas) {
+	 float volumen = gas/this.Tanque *100;
+	 System.out.println("El tanque de gasolina tiene " + volumen + " % de capacidad");
+	 
+ }
+	 
+ 
+ 
 	@Override
 	public String toString() {
 		return "Automovil [Modelo=" + Modelo + ", Color=" + Color + ", Año=" + Año + ", Marca=" + Marca + ", Chasis="

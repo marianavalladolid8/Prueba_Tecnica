@@ -22,42 +22,42 @@ public class Direccion {
 		
 		public String getCalle() {
 			return Calle;
-		}
+		}//getCalle
 
 
 		public void setCalle(String calle) {
 			Calle = calle;
-		}
+		}//setCalle
 
 
 		public String getColonia() {
 			return Colonia;
-		}
+		}//getColonia
 
 
 		public void setColonia(String colonia) {
 			Colonia = colonia;
-		}
+		}//setColonia
 
 
 		public String getCiudad() {
 			return Ciudad;
-		}
+		}//getCiudad
 
 
 		public void setCiudad(String ciudad) {
 			Ciudad = ciudad;
-		}
+		}//SetCiudad
 
 
 		public int getCodigoPpostal() {
 			return CodigoPpostal;
-		}
+		}//getCodigoPostal
 
 
 		public void setCodigoPpostal(int codigoPpostal) {
 			CodigoPpostal = codigoPpostal;
-		}
+		}//SetCodigoPostal
 
 		@Override
 		public String toString() {
