@@ -16,7 +16,7 @@ public class Automovil extends Propietario {
 	private String Npuertas;
 	private boolean TechoS;
 	private int NMarchas;
-	private boolean TransmisionA;
+	private boolean TransmisionA; 
 	
 	private int MarchaActual;
 	boolean Estado = false;
@@ -143,7 +143,7 @@ public class Automovil extends Propietario {
 	}
 
 	public void setTransmisionA(boolean transmisionA) {
-		TransmisionA = transmisionA;
+		TransmisionA = transmisionA; 
 	}// fin de getters y setters
 	
 			//Método para aceleración aumento de 1 en 1 km/h

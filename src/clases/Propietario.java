@@ -17,7 +17,7 @@ public class Propietario extends Direccion {
 		RFC = rFC;
 		CURP = cURP;
 		Nacimiento = nacimiento;
-	}
+	} 
 	
 
 	public Propietario(String calle, String colonia, String ciudad, int codigoPpostal, String nombre, String rFC,

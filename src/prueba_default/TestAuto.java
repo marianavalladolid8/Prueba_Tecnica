@@ -6,7 +6,7 @@ public class TestAuto {
 		Automovil Vocho = new Automovil ("Santa Rosa", "Santa Rosa del Valle", "Guadalajara", 45590, "Juan M","MOCJ953007R238JL" ,
 				"MOCJ953007R23", 300795, "Vocho", "Azul", 1978, "Volkwagen", "4 llantas",
 				"Juan", 4, 0, "4 Puertas", false, 4,
-				false, 0, true);
+				false, 0, true); 
 		
 		System.out.println(Vocho);
 		Vocho.Aceleracion();
